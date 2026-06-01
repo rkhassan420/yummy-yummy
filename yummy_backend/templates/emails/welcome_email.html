@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Welcome — Yummy-Yummy</title>
+</head>
+<body style="margin:0;padding:0;background:#f8fafc;font-family:Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;padding:40px 20px;">
+    <tr>
+      <td align="center">
+        <table width="560" cellpadding="0" cellspacing="0"
+               style="background:#fff;border-radius:20px;overflow:hidden;
+                      box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#0f172a,#064e3b);padding:36px 40px;text-align:center;">
+              <span style="font-size:48px;">🎉</span>
+              <h1 style="margin:12px 0 0;color:#fff;font-size:26px;">
+                Welcome to Yummy<span style="color:#22c55e;">-Yummy</span>!
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:40px;">
+              <h2 style="margin:0 0 12px;color:#0f172a;font-size:20px;">
+                Hi {{ first_name }}! 👋
+              </h2>
+              <p style="margin:0 0 24px;color:#64748b;font-size:15px;line-height:1.7;">
+                Your account has been created successfully.
+                You can now browse our full menu, place orders, and track
+                deliveries right from your account.
+              </p>
+
+              <!-- Feature highlights -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+                {% for feature in features %}
+                <tr>
+                  <td style="padding:8px 0;border-bottom:1px solid #f1f5f9;">
+                    <p style="margin:0;font-size:14px;color:#374151;">
+                      {{ feature.icon }} &nbsp;<strong>{{ feature.title }}</strong>
+                      — {{ feature.desc }}
+                    </p>
+                  </td>
+                </tr>
+                {% endfor %}
+              </table>
+
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center">
+                    <a href="{{ frontend_url }}/menu"
+                       style="display:inline-block;background:#22c55e;color:#fff;
+                              text-decoration:none;padding:14px 40px;border-radius:12px;
+                              font-size:15px;font-weight:700;">
+                      Browse Our Menu 🍽️
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:20px 40px;
+                       text-align:center;">
+              <p style="margin:0;font-size:12px;color:#94a3b8;">
+                © 2026 Yummy-Yummy · support@Yummy-Yummy.com
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
